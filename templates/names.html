@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+	{% block title %}
+		{% if is_cute %}
+			Hello Cutie
+		{% else %}
+			Hello Ugly
+		{% endif %}
+	{% endblock %}
+	{% block body %}
+	<ul>
+		{%for name in names%}
+			<li>{{name}}</li>
+		{%endfor%}
+	</ul>
+	<h3><a href="{{url_for('index')}}">See less...</a></h3>
+	{%endblock%}
